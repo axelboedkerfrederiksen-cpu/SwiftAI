@@ -8,11 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Business Upgrade — AI chatbot, hjemmeside og værktøjer til din virksomhed",
+  title: "SwiftAI — AI chatbot, hjemmeside og værktøjer til din virksomhed",
   description:
     "Jeg bygger en AI chatbot, ny hjemmeside og smarte AI-værktøjer til din virksomhed — på 4 uger. Af Axel, 15-årig udvikler fra København.",
   openGraph: {
-    title: "AI Business Upgrade — AI chatbot, hjemmeside og værktøjer",
+    title: "SwiftAI — AI chatbot, hjemmeside og værktøjer",
     description:
       "Jeg bygger en AI chatbot, ny hjemmeside og smarte AI-værktøjer til din virksomhed — på 4 uger.",
     locale: "da_DK",

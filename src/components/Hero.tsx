@@ -8,9 +8,9 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Giv din virksomhed en{" "}
+          SwiftAI —{" "}
           <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-            AI-upgrade
+            Giv din virksomhed en AI-upgrade
           </span>
         </h1>
 

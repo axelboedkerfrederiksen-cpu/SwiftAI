@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 border-t border-white/5 pt-8 text-xs text-gray-600">
-          © {new Date().getFullYear()} AI Business Upgrade. Alle rettigheder
+          © {new Date().getFullYear()} SwiftAI. Alle rettigheder
           forbeholdes.
         </div>
       </div>
