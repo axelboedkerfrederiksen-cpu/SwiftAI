@@ -5,7 +5,6 @@ import Pricing from "@/components/Pricing";
 import HowItWorks from "@/components/HowItWorks";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
-import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 export default function Home() {
   return (
@@ -13,18 +12,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <ScrollFadeIn>
-          <Features />
-        </ScrollFadeIn>
-        <ScrollFadeIn>
-          <Pricing />
-        </ScrollFadeIn>
-        <ScrollFadeIn>
-          <HowItWorks />
-        </ScrollFadeIn>
-        <ScrollFadeIn>
-          <About />
-        </ScrollFadeIn>
+        <Features />
+        <Pricing />
+        <HowItWorks />
+        <About />
       </main>
       <Footer />
     </>

@@ -29,14 +29,141 @@ body {
   }
 }
 
-/* Fade-in animation for sections */
+/* =====================
+   Keyframes
+   ===================== */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatOrbA {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.07;
+  }
+  50% {
+    transform: translateY(-24px) scale(1.1);
+    opacity: 0.12;
+  }
+}
+
+@keyframes floatOrbB {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(20px) scale(1.08);
+    opacity: 0.09;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.04; }
+  50%       { opacity: 0.10; }
+}
+
+/* =====================
+   Hero entrance
+   ===================== */
+
+.hero-badge {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.05s forwards;
+}
+
+.hero-title {
+  opacity: 0;
+  animation: fadeSlideUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  animation: fadeSlideUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  animation: fadeSlideUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+.hero-note {
+  opacity: 0;
+  animation: fadeSlideUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+}
+
+/* =====================
+   Orb animations
+   ===================== */
+
+.orb-float-a {
+  animation: floatOrbA 10s ease-in-out infinite;
+}
+
+.orb-float-b {
+  animation: floatOrbB 14s ease-in-out infinite;
+}
+
+.orb-pulse {
+  animation: pulseGlow 7s ease-in-out infinite;
+}
+
+/* =====================
+   Scroll fade-in variants
+   ===================== */
+
 .fade-in {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.93) translateY(16px);
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-scale.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }

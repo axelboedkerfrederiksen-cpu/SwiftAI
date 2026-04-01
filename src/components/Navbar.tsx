@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -11,11 +11,27 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 32);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-gray-950/80 backdrop-blur-xl">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "border-b border-white/[0.07] bg-gray-950/95 shadow-lg shadow-black/20 backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent backdrop-blur-sm"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-bold tracking-tight text-white">
+        <a
+          href="#"
+          className="text-lg font-bold tracking-tight text-white transition-opacity hover:opacity-75"
+        >
           SwiftAI
         </a>
 
@@ -52,7 +68,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-white/5 bg-gray-950/95 px-6 pb-6 pt-4 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/5 bg-gray-950/98 px-6 pb-6 pt-4 backdrop-blur-xl md:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}
