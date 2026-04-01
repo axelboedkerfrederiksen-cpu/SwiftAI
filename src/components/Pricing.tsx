@@ -101,7 +101,9 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="#book"
+                href="https://calendly.com/axelfrederiksen55/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`mt-8 block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all ${
                   plan.popular
                     ? "bg-blue-500 text-white hover:bg-blue-400 hover:shadow-lg hover:shadow-blue-500/25"

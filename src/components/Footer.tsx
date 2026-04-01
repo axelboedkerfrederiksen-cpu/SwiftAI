@@ -14,7 +14,9 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="mailto:axelfrederiksen55@gmail.com"
+            href="https://calendly.com/axelfrederiksen55/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-xl bg-blue-500 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-500/25"
           >
             Book en gratis demo
@@ -28,7 +30,9 @@ export default function Footer() {
         <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-500">
           <Mail size={16} />
           <a
-            href="mailto:axelfrederiksen55@gmail.com"
+            href="https://calendly.com/axelfrederiksen55/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-gray-300"
           >
             axelfrederiksen55@gmail.com

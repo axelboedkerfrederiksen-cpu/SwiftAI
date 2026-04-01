@@ -31,7 +31,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#book"
+            href="https://calendly.com/axelfrederiksen55/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-400 hover:shadow-lg hover:shadow-blue-500/25"
           >
             Book en gratis demo
@@ -62,7 +64,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#book"
+            href="https://calendly.com/axelfrederiksen55/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="mt-4 block rounded-lg bg-blue-500 px-5 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-blue-400"
           >
