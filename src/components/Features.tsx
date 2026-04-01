@@ -21,9 +21,9 @@ const features = [
   },
   {
     icon: HeadphonesIcon,
-    title: "4 ugers personlig support",
+    title: "Uendelig support",
     description:
-      "Du er aldrig alene — jeg hjælper dig med alt i de første 4 uger efter lancering.",
+      "Løbende support så længe du har et abonnement — du er aldrig alene.",
   },
 ];
 

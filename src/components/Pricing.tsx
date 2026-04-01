@@ -4,6 +4,7 @@ interface Plan {
   name: string;
   price: string;
   period: string;
+  note?: string;
   popular?: boolean;
   features: string[];
   cta: string;
@@ -12,8 +13,9 @@ interface Plan {
 const plans: Plan[] = [
   {
     name: "EmbedBot Chatbot",
-    price: "299",
-    period: "kr/md",
+    price: "1.999",
+    period: "kr (engangs)",
+    note: "+ 299 kr/md for drift",
     features: [
       "AI chatbot til din hjemmeside",
       "Svarer kunder 24/7",
@@ -31,20 +33,21 @@ const plans: Plan[] = [
       "AI chatbot",
       "Ny professionel hjemmeside",
       "Skræddersyede AI-værktøjer",
-      "4 ugers personlig support",
+      "Uendelig support (med abonnement)",
       "Alt inkluderet — ingen skjulte priser",
     ],
     cta: "Book en gratis demo",
   },
   {
-    name: "Website Vedligeholdelse",
-    price: "199",
-    period: "kr/md",
+    name: "Ny Hjemmeside",
+    price: "5.999",
+    period: "kr (engangs)",
+    note: "Vedligeholdelse fra 199 kr/md",
     features: [
-      "Løbende opdateringer",
-      "Fejlrettelse og support",
-      "Hosting og sikkerhed",
-      "Hurtig responstid",
+      "Moderne og professionelt design",
+      "Hurtig og mobilvenlig",
+      "SEO-optimeret",
+      "Klar inden for 2 uger",
     ],
     cta: "Kom i gang",
   },
@@ -87,6 +90,9 @@ export default function Pricing() {
                 </span>
                 <span className="text-sm text-gray-400">{plan.period}</span>
               </div>
+              {plan.note && (
+                <p className="mt-1 text-xs text-gray-500">{plan.note}</p>
+              )}
 
               <ul className="mt-8 space-y-3">
                 {plan.features.map((feature) => (
