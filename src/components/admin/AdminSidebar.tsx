@@ -15,16 +15,16 @@ export default function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full border-b border-gray-800 bg-gray-950/80 p-4 lg:h-screen lg:w-72 lg:border-b-0 lg:border-r lg:p-6">
+    <aside className="relative z-40 w-full border-b border-gray-800 bg-gray-950/80 p-4 lg:h-screen lg:w-72 lg:border-b-0 lg:border-r lg:p-6">
       <p className="mb-6 text-lg font-semibold text-white">Admin</p>
-      <nav className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-1">
+      <nav className="relative z-40 grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-1">
         {links.map(({ href, label, icon: Icon }) => {
           const active = pathname === href;
           return (
             <Link
               key={href}
               href={href}
-              className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition ${
+              className={`relative z-50 flex cursor-pointer touch-manipulation items-center gap-2 rounded-lg px-3 py-2 text-sm transition ${
                 active
                   ? "bg-blue-500/20 text-blue-300"
                   : "text-gray-300 hover:bg-gray-900 hover:text-white"
