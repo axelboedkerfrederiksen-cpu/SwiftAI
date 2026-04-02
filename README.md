@@ -1,5 +1,39 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Admin Dashboard
+
+This project now includes a protected admin area with these routes:
+
+- `/admin` (overview)
+- `/admin/virksomheder`
+- `/admin/analytics`
+- `/admin/driftstatus`
+- `/admin/login`
+
+Admin data is fetched from Supabase tables:
+
+- `companies`
+- `analytics_daily`
+- `operations_status`
+- `incidents`
+
+Set up environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+Then set values in `.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+```
+
+Create the required tables/policies in Supabase by running:
+
+- SQL from `supabase/schema.sql`
+
 ## Getting Started
 
 First, run the development server:
